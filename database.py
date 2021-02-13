@@ -1,5 +1,6 @@
 import sqlite3
 from plant import Plant
+from utilities.scraper import getKcal
 
 conn = sqlite3.connect(':memory:')
 
@@ -23,9 +24,10 @@ def insert_user(hasher, name):
                   {'ID': hasher, 'username': name, 'user_plants': "", 'user_plant_count': 0, 'user_carb_footprint': 0})
 
 
-def add_existing_plant(hasher, name, add_plants, carb):
+def add_existing_plant(hasher, name, add_plants, plant):
     with conn:
         c.row_factory = lambda cursor, row: row[0]
+        carb = getKcal(plant)
         c.execute("SELECT user_plant_count FROM users WHERE username=?", (name,))
         a = c.fetchall()[0] + add_plants
         c.execute("SELECT plant_count FROM gardens WHERE ID=?", (hasher,))
@@ -41,8 +43,8 @@ def add_existing_plant(hasher, name, add_plants, carb):
         c.execute("UPDATE users SET user_carb_footprint=? WHERE username=?", (f, name))
 
 
-def insert_new_plant(hasher, name, plant, add_plants, carb):
-    add_existing_plant(hasher, name, add_plants, carb)
+def insert_new_plant(hasher, name, plant, add_plants):
+    add_existing_plant(hasher, name, add_plants, plant)
     with conn:
         c.row_factory = lambda cursor, row: row[0]
         c.execute("SELECT user_plants FROM users WHERE username=?", (name,))
@@ -67,9 +69,9 @@ insert_garden(2)
 insert_user(1, user1)
 insert_user(2, user2)
 insert_user(1, user3)
-insert_new_plant(1, user1, bana, 2, 20)
-insert_new_plant(1, user3, broc, 1, 15)
-add_existing_plant(1, user3, 2, 15)
+insert_new_plant(1, user1, bana, 2)
+insert_new_plant(1, user3, broc, 1)
+add_existing_plant(1, user3, 2, bana)
 get_users(1)
 print(c.fetchall())
 get_users(2)
