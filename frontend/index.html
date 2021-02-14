@@ -28,18 +28,21 @@
                     </div>
             </div>
             <div>
-                <form action="/search/" method="GET">
                     <h2 class="codetag">Create an access code:</h2>
                     <div >
-                        <p class="accesscodeenter"></p>
-                        <button class="accesscodegen" >Create</button>
+                        <input class="accesscodeenter" type="text" id="newaccesscode"/>
+                        <button onclick="createGarden(newaccesscode.value)" class="accesssubmit">Create</button>
                     </div>
-                </form>
             </div>
         </div>
-        <div>
+        <div id='garden-data'>
             <h2 id="garden"></h2>
-            <h2 id="add-garden"></h2>
+            <h2 id="carbon-offset"></h2>
+            <h2 id="add-more"></h2>
+            <span id="plant-input">
+                <input class="accesscodeenter" type="text" id="plant_num"/>
+                <button onclick="addPlants(plant_num.value)" class="accesssubmit">Submit</button>
+            </span>
         </div>
     </body>
 </html>
