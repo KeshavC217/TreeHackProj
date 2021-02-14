@@ -1,0 +1,88 @@
+<html>
+    <!DOCTYPE html>
+<html>
+<head>
+</head>
+<style>
+    .content-table{
+        border-collapse:collapse;
+        margin: 150px;
+        font-size: 0.9em;
+        min-width: 400px;
+        font-family: sans-serif;
+        border-radius: 5px 5px 0 0;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0,0,0,0.15);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .content-table thead tr{
+        background-color: #009879;
+        text-align: left;
+        font-weight: bold;
+
+    }
+    .content-table th,
+    .content-table td{
+        padding: 12px 15px;
+    }
+
+    .content-table tbody tr{
+        border-bottom: 1px solid #ddd;
+    }
+
+    .content-table tbody tr:nth-of-type(even){
+        background-color: #f3f3f3;
+    }
+
+    .content-table tbody tr.active-row{
+        font-weight: bold;
+        color: #009879;
+    } 
+    
+</style>
+<body>
+    <table class="content-table">
+        <colgroup>
+            <col class="vzebra-odd"> 
+            <col class="vzebra-even">
+            <col class="vzebra-odd">
+            <col class="vzebra-even">
+         </colgroup>
+        <thead>
+            <tr>
+                <th scope="col" id="vzebra-comedy">Plant name</th>
+                <th>link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Carrot</td>
+                <td>link</td>
+            </tr>
+            <tr class="active-row">
+                <td>Tomato</td>
+                <td>link</td>
+            </tr>
+            <tr>
+                <td>Eggplant</td>
+                <td>link</td>
+            </tr>
+            <tr>
+                <td>Spinach</td>
+                <td>link</td>
+            </tr>
+            <tr>
+                <td>Orange</td>
+                <td>link</td>
+            </tr>
+            <tr>
+                <td>Money</td>
+                <td>link</td>
+            </tr>
+            <!-- and so on... -->
+        </tbody>
+    </table>
+</body>
+</html>
