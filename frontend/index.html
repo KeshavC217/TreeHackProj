@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./styles.css">
+        <script src="https://kit.fontawesome.com/a1c7659691.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="index.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <h1 class="name">OurPatch<i class="fab fa-envira"></i></h1>
+        <div class="container">
+            <div>
+                    <h2 class="codetag">Enter an access code:</h2>
+                    <div >
+                        <input class="accesscodeenter" type="text" id="accesscode"/>
+                        <button onclick="retrieveGarden(accesscode.value)" class="accesssubmit">Submit</button>
+                    </div>
+            </div>
+            <div>
+                    <h2 class="codetag">Create an access code:</h2>
+                    <div >
+                        <input class="accesscodeenter" type="text" id="newaccesscode"/>
+                        <button onclick="createGarden(newaccesscode.value)" class="accesssubmit">Create</button>
+                    </div>
+            </div>
+        </div>
+        <div id='garden-data'>
+            <h2 id="garden"></h2>
+            <h2 id="carbon-offset"></h2>
+            <h2 id="add-more"></h2>
+            <span id="plant-input">
+                <input class="accesscodeenter" type="text" id="plant_num"/>
+                <button onclick="addPlants(plant_num.value)" class="accesssubmit">Submit</button>
+            </span>
+        </div>
+    </body>
+</html>

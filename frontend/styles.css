@@ -1,0 +1,71 @@
+html {
+  background-color: #26ce99;
+}
+
+@font-face {
+  font-family: titleFont;
+  src: url(Gidole-Regular.otf);
+}
+
+.name {
+  font-family: titleFont;
+  color: white;
+  font-size: 5em;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.codetag {
+  color: white;
+  font-family: titleFont;
+  margin-bottom: 0.5em;
+  margin-top: 0;
+}
+
+.accesscodeenter {
+  display: block;
+  margin: 0 auto;
+  width: 10em;
+  height: 2em;
+  border-radius: 2em;
+  border: 1px solid #26ce99;
+  outline: 0;
+}
+
+.accesssubmit {
+  display: block;
+  margin: 0 auto;
+  margin-top: 1em;
+  font-family: titleFont;
+  border-radius: 0.5em;
+  border: 1px solid #26ce99;
+  background-color: white;
+  font-size: 1em;
+}
+
+.accesscodegen {
+  display: block;
+  margin: 0 auto;
+  margin-top: 0.5em;
+  font-family: titleFont;
+  border-radius: 0.5em;
+  border: 1px solid #26ce99;
+  background-color: white;
+  font-size: 1em;
+}
+
+#plant-input {
+  opacity: 0;
+}
+
+input {
+  font-family: titleFont;
+  font-size: 1em;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
