@@ -33,7 +33,6 @@ function retrieveGardenHelper(d){
     document.getElementById("add-more").style.marginTop = "2em";
     document.getElementById("add-more").style.letterSpacing = "0.04em";
     document.getElementById("plant-input").style.opacity = "100";
-\
     
 
 }
