@@ -2,6 +2,7 @@
     <!DOCTYPE html>
 <html>
 <head>
+    <h1 style="text-align:center">Your Plants</h1>
 </head>
 <style>
     .content-table{
@@ -36,13 +37,18 @@
         background-color: #f3f3f3;
     }
 
+    .content-table tbody tr:nth-of-type(odd){
+        background-color: #ffffff;
+    }
+
     .content-table tbody tr.active-row{
         font-weight: bold;
         color: #009879;
     } 
     
 </style>
-<body>
+<body style="background-color: #26ce99">
+
     <table class="content-table">
         <colgroup>
             <col class="vzebra-odd"> 
