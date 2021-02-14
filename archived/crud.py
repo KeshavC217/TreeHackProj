@@ -31,7 +31,7 @@ users_schema = UserSchema(many=True)
 
 
 # endpoint to create new user
-@app.route("/user", methods=["POST"])
+@app.route("/add", methods=["POST"])
 def add_user():
     username = request.json['username']
     email = request.json['email']
@@ -41,7 +41,7 @@ def add_user():
     db.session.add(new_user)
     db.session.commit()
 
-    return jsonify(new_user)
+    return user_schema.jsonify(new_user)
 
 
 # endpoint to show all users
